@@ -33,12 +33,13 @@ QUICK-START.md            what to do, in order
 settings/                 every setting explained + names by brand
 wiki/                     concepts (one page per topic)
 sources/                  bibliography, with an assessment of every source
-.github/workflows/        automatic link check
+mkdocs.yml                website configuration (GitHub Pages)
+.github/workflows/        link check and site publishing
 ```
 
 ## Automatic checks
 
-A GitHub Action ([link-check.yml](.github/workflows/link-check.yml)) periodically checks that links still work. If a link dies, replace it with an archived copy ([Wayback Machine](https://web.archive.org/)) instead of removing the source.
+A GitHub Action ([link-check.yml](https://github.com/NunzioLangiulli/home-cinema-guide/blob/main/.github/workflows/link-check.yml)) periodically checks that links still work. If a link dies, replace it with an archived copy ([Wayback Machine](https://web.archive.org/)) instead of removing the source.
 
 ## Style
 

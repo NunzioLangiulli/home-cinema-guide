@@ -24,6 +24,7 @@ jobs:
             --accept 200,206,403,429
             --max-retries 2
             --exclude-path .github
+            --exclude "nunziolangiulli.github.io"
             --exclude "phfx\.com"
             "./**/*.md"
           fail: true

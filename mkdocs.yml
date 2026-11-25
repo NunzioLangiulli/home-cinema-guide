@@ -1,0 +1,78 @@
+# Site build for GitHub Pages.
+# The Markdown files live at the repository root so they read well on GitHub;
+# the build copies them into site_src/ (see .github/workflows/pages.yml).
+site_name: Home Cinema Guide
+site_description: TV picture and sound settings for watching films at home, with every claim sourced.
+site_url: https://nunziolangiulli.github.io/home-cinema-guide/
+repo_url: https://github.com/NunzioLangiulli/home-cinema-guide
+repo_name: home-cinema-guide
+edit_uri: ""
+docs_dir: site_src
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      # GitHub-style anchors, so the same links work on GitHub and on the site
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.superfences
+
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: info
+
+nav:
+  - Home: README.md
+  - Quick start: QUICK-START.md
+  - Settings:
+      - Settings explained: settings/settings-explained.md
+      - Names by brand: settings/names-by-brand.md
+  - Wiki:
+      - Glossary: wiki/00-glossary.md
+      - The image pipeline: wiki/01-image-pipeline.md
+      - Frame rate and motion: wiki/02-frame-rate-and-motion.md
+      - Color: wiki/03-color.md
+      - HDR: wiki/04-hdr.md
+      - Aspect ratios: wiki/05-aspect-ratios.md
+      - Audio: wiki/06-audio.md
+      - Privacy and ACR: wiki/07-privacy-acr.md
+      - Calibration: wiki/08-calibration.md
+  - Sources:
+      - Bibliography: sources/bibliography.md
+  - Contributing: CONTRIBUTING.md

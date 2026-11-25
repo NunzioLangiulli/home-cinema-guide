@@ -1,5 +1,7 @@
 # Home Cinema — A wiki and settings guide for watching films at home
 
+**Read it as a website:** [nunziolangiulli.github.io/home-cinema-guide](https://nunziolangiulli.github.io/home-cinema-guide/) (search and side menu).
+
 > Understand **what** to set on your TV, **why**, and **where** certain conventions come from (24 fps, D65, gamma 2.4, black bars, Atmos…), with every claim linked to its source.
 
 The starting point is a 2026 video series by the YouTube channel **Slidebean** on picture and sound quality at home, plus their free *TV Calibrator* app. The videos explain complex topics clearly and give practical fixes. This guide builds on them and **checks, corrects or extends** each claim with primary sources: ITU/SMPTE standards, UHD Alliance documents, RTINGS measurements and manufacturer documentation.
@@ -11,7 +13,7 @@ The starting point is a 2026 video series by the YouTube channel **Slidebean** o
 | Fix your TV **tonight**, without the theory | [QUICK-START.md](QUICK-START.md) |
 | Understand one setting (what it does, why, when to make an exception) | [settings/settings-explained.md](settings/settings-explained.md) |
 | Find a setting's name on **your brand** | [settings/names-by-brand.md](settings/names-by-brand.md) |
-| Understand the concepts (wiki) | [wiki/](wiki/), index below |
+| Understand the concepts (wiki) | [Glossary](wiki/00-glossary.md) and the index below |
 | See every source, with an assessment of each | [sources/bibliography.md](sources/bibliography.md) |
 | Propose a correction | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
