@@ -10,8 +10,8 @@
   --hc-glass-strong: rgba(14, 15, 21, 0.72);
   --hc-glass-border: rgba(255, 255, 255, 0.08);
   --hc-glass-highlight: rgba(255, 255, 255, 0.05);
-  --hc-gold: #e2b866;                     /* warm "projector light" accent  */
-  --hc-gold-soft: rgba(226, 184, 102, 0.14);
+  --hc-accent: #8fc1ff;                   /* light sky blue accent            */
+  --hc-accent-soft: rgba(143, 193, 255, 0.14);
   --hc-cyan: #7fd3e6;
   --hc-radius: 14px;
   --hc-blur: blur(18px) saturate(150%);
@@ -28,12 +28,12 @@
   --md-primary-fg-color--dark: #050609;
   --md-primary-bg-color: rgba(236, 238, 245, 0.95);
 
-  --md-accent-fg-color: var(--hc-gold);
-  --md-accent-fg-color--transparent: var(--hc-gold-soft);
+  --md-accent-fg-color: var(--hc-accent);
+  --md-accent-fg-color--transparent: var(--hc-accent-soft);
 
   --md-typeset-color: rgba(230, 232, 240, 0.88);
-  --md-typeset-a-color: var(--hc-gold);
-  --md-typeset-mark-color: rgba(226, 184, 102, 0.25);
+  --md-typeset-a-color: var(--hc-accent);
+  --md-typeset-mark-color: rgba(143, 193, 255, 0.25);
   --md-typeset-table-color: rgba(255, 255, 255, 0.07);
   --md-typeset-table-color--light: rgba(255, 255, 255, 0.035);
 
@@ -48,7 +48,7 @@
 body[data-md-color-scheme="slate"] {
   background-color: var(--hc-bg);
   background-image:
-    radial-gradient(900px 520px at 8% 4%, rgba(226, 184, 102, 0.26), transparent 62%),
+    radial-gradient(900px 520px at 8% 4%, rgba(90, 140, 255, 0.24), transparent 62%),
     radial-gradient(760px 520px at 92% 18%, rgba(98, 120, 255, 0.22), transparent 62%),
     radial-gradient(820px 600px at 70% 92%, rgba(127, 211, 230, 0.16), transparent 62%),
     radial-gradient(700px 500px at 18% 88%, rgba(190, 90, 160, 0.12), transparent 62%);
@@ -65,7 +65,7 @@ body[data-md-color-scheme="slate"] {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #f4f5f9;
-  background: linear-gradient(92deg, #ffffff 0%, #f1dcae 55%, var(--hc-gold) 100%);
+  background: linear-gradient(92deg, #ffffff 0%, #cfe3ff 55%, var(--hc-accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,12 +82,12 @@ body[data-md-color-scheme="slate"] {
 
 .md-typeset a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(226, 184, 102, 0.28);
+  border-bottom: 1px solid rgba(143, 193, 255, 0.28);
   transition: color .15s ease, border-color .15s ease;
 }
 .md-typeset a:hover {
-  color: #f6d793;
-  border-bottom-color: rgba(246, 215, 147, 0.8);
+  color: #c2ddff;
+  border-bottom-color: rgba(194, 221, 255, 0.8);
 }
 .md-typeset .headerlink { border-bottom: none; }
 .md-typeset h1 .headerlink { display: none; }
@@ -129,7 +129,7 @@ body[data-md-color-scheme="slate"] {
 }
 .md-nav__link { transition: color .15s ease; }
 .md-nav__link--active,
-.md-nav__link:is(:focus, :hover) { color: var(--hc-gold); }
+.md-nav__link:is(:focus, :hover) { color: var(--hc-accent); }
 .md-nav__title { color: var(--md-default-fg-color--light); }
 
 /* Main content: one large glass card */
@@ -167,7 +167,7 @@ body[data-md-color-scheme="slate"] {
   border-top: none;
   border-radius: 0 0 10px 10px;
 }
-.md-search-result__item:hover { background: var(--hc-gold-soft); }
+.md-search-result__item:hover { background: var(--hc-accent-soft); }
 
 /* ---------- Tables ----------------------------------------------------- */
 .md-typeset table:not([class]) {
@@ -179,11 +179,11 @@ body[data-md-color-scheme="slate"] {
   font-size: 0.72rem;
 }
 .md-typeset table:not([class]) th {
-  background: rgba(226, 184, 102, 0.10);
-  color: #f3e3bd;
+  background: rgba(143, 193, 255, 0.10);
+  color: #dcebff;
   font-weight: 600;
   letter-spacing: 0.01em;
-  border-bottom: 1px solid rgba(226, 184, 102, 0.22);
+  border-bottom: 1px solid rgba(143, 193, 255, 0.22);
 }
 .md-typeset table:not([class]) td {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -193,8 +193,8 @@ body[data-md-color-scheme="slate"] {
 
 /* ---------- Blockquotes (page intros), admonitions, code --------------- */
 .md-typeset blockquote {
-  border-left: 3px solid var(--hc-gold);
-  background: linear-gradient(90deg, rgba(226, 184, 102, 0.09), rgba(226, 184, 102, 0.0) 80%);
+  border-left: 3px solid var(--hc-accent);
+  background: linear-gradient(90deg, rgba(143, 193, 255, 0.09), rgba(143, 193, 255, 0.0) 80%);
   border-radius: 0 10px 10px 0;
   padding: 0.6em 1em;
   color: var(--md-default-fg-color--light);
