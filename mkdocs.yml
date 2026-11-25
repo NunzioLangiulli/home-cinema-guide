@@ -34,7 +34,7 @@ theme:
   favicon: assets/favicon.svg
 
 extra_css:
-  - assets/stylesheets/extra.css
+  - assets/stylesheets/extra.css?v=2  # bump v= when the stylesheet changes (browser cache)
 
 plugins:
   - search
