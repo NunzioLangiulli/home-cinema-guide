@@ -1,6 +1,6 @@
 # Quick start: setting up your TV for films, step by step
 
-> This page tells you **what to do and in what order**. The **why** behind each step is in [settings/settings-explained.md](settings/settings-explained.md) (linked next to each item). Exact menu names per brand are in [settings/names-by-brand.md](settings/names-by-brand.md).
+> This page tells you **what to do and in what order**. The **why** behind each step is in [Settings explained](settings/settings-explained.md) (linked next to each item). Exact menu names per brand are in [Names by brand](settings/names-by-brand.md).
 
 **Time:** level 1 ≈ 15 minutes · level 2 ≈ 45 minutes · level 3 ≈ one evening.
 **You need:** the remote, a film you know well, and test patterns (free, see [Level 2](#level-2--adjustments-with-test-patterns-45-min)).

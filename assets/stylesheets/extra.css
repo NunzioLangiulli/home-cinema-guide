@@ -1,0 +1,244 @@
+/* =========================================================================
+   Home Cinema Guide — "screening room" dark theme with frosted glass
+   Built on MkDocs Material's slate scheme.
+   ========================================================================= */
+
+/* ---------- Palette ---------------------------------------------------- */
+[data-md-color-scheme="slate"] {
+  --hc-bg: #07080c;                       /* near-black, very slightly blue */
+  --hc-glass: rgba(24, 27, 38, 0.46);     /* frosted panel fill            */
+  --hc-glass-strong: rgba(14, 15, 21, 0.72);
+  --hc-glass-border: rgba(255, 255, 255, 0.08);
+  --hc-glass-highlight: rgba(255, 255, 255, 0.05);
+  --hc-gold: #e2b866;                     /* warm "projector light" accent  */
+  --hc-gold-soft: rgba(226, 184, 102, 0.14);
+  --hc-cyan: #7fd3e6;
+  --hc-radius: 14px;
+  --hc-blur: blur(18px) saturate(150%);
+
+  --md-hue: 230;
+  --md-default-bg-color: var(--hc-bg);
+  --md-default-fg-color: rgba(236, 238, 245, 0.92);
+  --md-default-fg-color--light: rgba(236, 238, 245, 0.66);
+  --md-default-fg-color--lighter: rgba(236, 238, 245, 0.38);
+  --md-default-fg-color--lightest: rgba(236, 238, 245, 0.10);
+
+  --md-primary-fg-color: #0d0f15;
+  --md-primary-fg-color--light: #1a1d27;
+  --md-primary-fg-color--dark: #050609;
+  --md-primary-bg-color: rgba(236, 238, 245, 0.95);
+
+  --md-accent-fg-color: var(--hc-gold);
+  --md-accent-fg-color--transparent: var(--hc-gold-soft);
+
+  --md-typeset-color: rgba(230, 232, 240, 0.88);
+  --md-typeset-a-color: var(--hc-gold);
+  --md-typeset-mark-color: rgba(226, 184, 102, 0.25);
+  --md-typeset-table-color: rgba(255, 255, 255, 0.07);
+  --md-typeset-table-color--light: rgba(255, 255, 255, 0.035);
+
+  --md-code-bg-color: rgba(255, 255, 255, 0.045);
+  --md-code-fg-color: #d9dbe6;
+
+  --md-footer-bg-color: transparent;
+  --md-footer-bg-color--dark: transparent;
+}
+
+/* ---------- Background: dark room with soft projector glows ------------ */
+body[data-md-color-scheme="slate"] {
+  background-color: var(--hc-bg);
+  background-image:
+    radial-gradient(900px 520px at 8% 4%, rgba(226, 184, 102, 0.26), transparent 62%),
+    radial-gradient(760px 520px at 92% 18%, rgba(98, 120, 255, 0.22), transparent 62%),
+    radial-gradient(820px 600px at 70% 92%, rgba(127, 211, 230, 0.16), transparent 62%),
+    radial-gradient(700px 500px at 18% 88%, rgba(190, 90, 160, 0.12), transparent 62%);
+  background-attachment: fixed;
+}
+
+/* ---------- Typography ------------------------------------------------- */
+.md-typeset {
+  font-size: 0.79rem;
+  line-height: 1.7;
+  letter-spacing: 0.002em;
+}
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f4f5f9;
+  background: linear-gradient(92deg, #ffffff 0%, #f1dcae 55%, var(--hc-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.md-typeset h2 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: #eef0f6;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--hc-glass-border);
+}
+.md-typeset h3 { font-weight: 600; color: #e9ebf3; }
+.md-typeset strong { color: #f3f4f8; }
+
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(226, 184, 102, 0.28);
+  transition: color .15s ease, border-color .15s ease;
+}
+.md-typeset a:hover {
+  color: #f6d793;
+  border-bottom-color: rgba(246, 215, 147, 0.8);
+}
+.md-typeset .headerlink { border-bottom: none; }
+.md-typeset h1 .headerlink { display: none; }
+
+/* ---------- Frosted glass helper -------------------------------------- */
+.md-header,
+.md-tabs,
+.md-sidebar__scrollwrap,
+.md-search__form,
+.md-search__output,
+.md-typeset table:not([class]),
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset pre > code,
+.md-footer-meta {
+  -webkit-backdrop-filter: var(--hc-blur);
+  backdrop-filter: var(--hc-blur);
+}
+
+/* Header: floating glass bar */
+.md-header {
+  background-color: rgba(9, 10, 15, 0.62);
+  border-bottom: 1px solid var(--hc-glass-border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+.md-header--shadow { box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45); }
+.md-header__title { font-weight: 600; letter-spacing: 0.01em; }
+
+/* Sidebars: glass panels */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar__scrollwrap {
+    background: var(--hc-glass);
+    border: 1px solid var(--hc-glass-border);
+    border-radius: var(--hc-radius);
+    box-shadow: inset 0 1px 0 var(--hc-glass-highlight), 0 12px 40px rgba(0, 0, 0, 0.35);
+    margin: 0.6rem 0.4rem;
+    padding: 0.3rem 0;
+  }
+}
+.md-nav__link { transition: color .15s ease; }
+.md-nav__link--active,
+.md-nav__link:is(:focus, :hover) { color: var(--hc-gold); }
+.md-nav__title { color: var(--md-default-fg-color--light); }
+
+/* Main content: one large glass card */
+@media screen and (min-width: 60em) {
+  .md-content {
+    margin: 0.6rem 0.4rem;
+  }
+  .md-content__inner {
+    background: linear-gradient(160deg, rgba(30, 33, 46, 0.50), rgba(14, 15, 22, 0.42));
+    border: 1px solid var(--hc-glass-border);
+    border-radius: calc(var(--hc-radius) + 4px);
+    box-shadow: inset 0 1px 0 var(--hc-glass-highlight), 0 20px 60px rgba(0, 0, 0, 0.40);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    backdrop-filter: blur(22px) saturate(160%);
+    padding: 1.6rem 2rem 2rem;
+    margin-top: 0.6rem;
+  }
+  .md-content__inner::before { display: none; }
+}
+
+/* ---------- Search ----------------------------------------------------- */
+.md-search__form {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--hc-glass-border);
+  border-radius: 10px;
+}
+.md-search__form:hover { background: rgba(255, 255, 255, 0.09); }
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  background: var(--hc-glass-strong);
+  border-radius: 10px 10px 0 0;
+}
+.md-search__output {
+  background: var(--hc-glass-strong);
+  border: 1px solid var(--hc-glass-border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+.md-search-result__item:hover { background: var(--hc-gold-soft); }
+
+/* ---------- Tables ----------------------------------------------------- */
+.md-typeset table:not([class]) {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--hc-glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28);
+  font-size: 0.72rem;
+}
+.md-typeset table:not([class]) th {
+  background: rgba(226, 184, 102, 0.10);
+  color: #f3e3bd;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid rgba(226, 184, 102, 0.22);
+}
+.md-typeset table:not([class]) td {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.md-typeset table:not([class]) tbody tr { transition: background-color .15s ease; }
+.md-typeset table:not([class]) tbody tr:hover { background: rgba(255, 255, 255, 0.04); }
+
+/* ---------- Blockquotes (page intros), admonitions, code --------------- */
+.md-typeset blockquote {
+  border-left: 3px solid var(--hc-gold);
+  background: linear-gradient(90deg, rgba(226, 184, 102, 0.09), rgba(226, 184, 102, 0.0) 80%);
+  border-radius: 0 10px 10px 0;
+  padding: 0.6em 1em;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .admonition,
+.md-typeset details {
+  background: var(--hc-glass);
+  border: 1px solid var(--hc-glass-border);
+  border-radius: 12px;
+}
+.md-typeset code {
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.md-typeset pre > code {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* ---------- Footer ----------------------------------------------------- */
+.md-footer { background: transparent; }
+.md-footer-meta {
+  background: rgba(7, 8, 12, 0.6);
+  border-top: 1px solid var(--hc-glass-border);
+}
+.md-footer__link { transition: opacity .2s ease; }
+
+/* ---------- Scrollbars ------------------------------------------------- */
+* { scrollbar-color: rgba(255, 255, 255, 0.16) transparent; scrollbar-width: thin; }
+
+/* ---------- Accessibility and fallbacks -------------------------------- */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .md-header { background-color: #0b0c11; }
+  .md-content__inner,
+  .md-sidebar__scrollwrap,
+  .md-search__output { background: #12141b !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .md-header, .md-content__inner, .md-sidebar__scrollwrap, .md-search__output {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: #12141b !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

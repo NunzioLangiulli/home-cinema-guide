@@ -28,7 +28,7 @@ jobs:
         # The pages live at the repository root so they also read well on GitHub.
         run: |
           mkdir site_src
-          cp -r README.md QUICK-START.md CONTRIBUTING.md settings wiki sources site_src/
+          cp -r README.md QUICK-START.md CONTRIBUTING.md settings wiki sources assets site_src/
       - name: Build
         env:
           NO_MKDOCS_2_WARNING: "1"

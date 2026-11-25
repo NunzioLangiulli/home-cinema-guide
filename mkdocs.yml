@@ -22,18 +22,19 @@ theme:
     - toc.follow
     - content.code.copy
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue grey
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue grey
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    scheme: slate
+    primary: custom
+    accent: custom
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/television-classic
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 plugins:
   - search

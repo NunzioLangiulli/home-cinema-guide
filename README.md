@@ -10,12 +10,12 @@ The starting point is a 2026 video series by the YouTube channel **Slidebean** o
 
 | If you want to… | Go to |
 |---|---|
-| Fix your TV **tonight**, without the theory | [QUICK-START.md](QUICK-START.md) |
-| Understand one setting (what it does, why, when to make an exception) | [settings/settings-explained.md](settings/settings-explained.md) |
-| Find a setting's name on **your brand** | [settings/names-by-brand.md](settings/names-by-brand.md) |
+| Fix your TV **tonight**, without the theory | [Quick start](QUICK-START.md) |
+| Understand one setting (what it does, why, when to make an exception) | [Settings explained](settings/settings-explained.md) |
+| Find a setting's name on **your brand** | [Names by brand](settings/names-by-brand.md) |
 | Understand the concepts (wiki) | [Glossary](wiki/00-glossary.md) and the index below |
-| See every source, with an assessment of each | [sources/bibliography.md](sources/bibliography.md) |
-| Propose a correction | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| See every source, with an assessment of each | [Bibliography](sources/bibliography.md) |
+| Propose a correction | [Contributing](CONTRIBUTING.md) |
 
 ## Wiki
 
