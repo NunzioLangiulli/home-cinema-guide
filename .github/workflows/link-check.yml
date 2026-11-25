@@ -1,0 +1,29 @@
+name: Link check
+
+on:
+  push:
+    paths: ["**.md"]
+  pull_request:
+    paths: ["**.md"]
+  schedule:
+    - cron: "0 6 * * 1"   # every Monday
+  workflow_dispatch:
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links in Markdown files
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Some sites block bots: those codes don't fail the check but still show in the report.
+          # phfx.com is a known-dead link kept on purpose (cited by a video, marked as 404 in the text).
+          args: >-
+            --no-progress
+            --accept 200,206,403,429
+            --max-retries 2
+            --exclude-path .github
+            --exclude "phfx\.com"
+            "./**/*.md"
+          fail: true
